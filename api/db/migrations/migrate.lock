@@ -1,0 +1,5 @@
+# Prisma Migrate lockfile v1
+
+20201123220101-add-post-user
+20201123221251-add-fields
+20201124051744-add-email-and-post-title-fields
