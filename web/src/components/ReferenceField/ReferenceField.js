@@ -1,5 +1,5 @@
 import { useQuery } from '@redwoodjs/web'
-import { useReducer, useEffect, useRef } from 'react'
+import { useReducer, useEffect } from 'react'
 import { HiddenField, TextField } from '@redwoodjs/forms'
 
 /**
@@ -73,7 +73,6 @@ const useReferenceField = (refQuery, searchKey, searchFields, defaultValue) => {
 }
 
 const ReferenceField = (props) => {
-  const inputRef = useRef()
   const [state, dispatch, data, loading, error] = useReferenceField(
     props.refQuery,
     props.searchKey,
@@ -92,7 +91,6 @@ const ReferenceField = (props) => {
     <div>
       <HiddenField name={props.name} value={state.selected ?? ''} />
       <TextField
-        ref={inputRef}
         name="refInput"
         className="rw-input"
         autoComplete="off"
