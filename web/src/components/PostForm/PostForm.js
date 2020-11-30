@@ -1,7 +1,4 @@
-// import { useState } from 'react'
-// import { useQuery } from '@redwoodjs/web'
 import { ReferenceField } from 'src/components/ReferenceField'
-
 import {
   Form,
   FormError,
@@ -14,9 +11,7 @@ import { QUERY as AUTHOR_QUERY } from 'src/components/UsersCell'
 
 const PostForm = (props) => {
   const onSubmit = (data) => {
-    // remove hidden refInput field before save
-    const { refInput, ...fields } = data
-    props.onSave(fields, props?.post?.id)
+    props.onSave(data, props?.post?.id)
   }
   return (
     <div className="rw-form-wrapper">
